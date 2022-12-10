@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<form action="" method="post">
+{% if request.user.is_authenticated %}
+<form action="" class="form-horizontal" method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="submit">
-</form>
 
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class="add-story-btn">
+</form>
+{% else %}
+<h3>To add story <a href="{% url 'login' %}">login</a> or <a href="{% url 'users:createAccount'%}">create account</a> </h3>
+{% endif %}
 {% endblock %}

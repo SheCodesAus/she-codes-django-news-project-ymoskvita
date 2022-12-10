@@ -13,3 +13,8 @@ class CreateAccountView(CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'users/createAccount.html'
+
+class AccountView(generic.DetailView):
+    model = CustomUser
+    template_name = 'users/account.html'
+    context_object_name = 'user'

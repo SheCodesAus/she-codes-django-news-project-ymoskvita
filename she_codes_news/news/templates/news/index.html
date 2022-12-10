@@ -6,9 +6,12 @@
     {% endblock %}
 
     {% block content %}
-    <a href="{% url 'news:newStory' %}">Write New Story</a>
-
-    <h2>Latest News</h2>
+    <div class="latest-news-header">
+        <h2>Latest News</h2>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'news:newStory' %}" class="new-story-btn">Write New Story</a>
+        {% endif %}
+    </div>
 
     <div id="latest-stories">
         {% if latest_stories %}
@@ -20,7 +23,7 @@
         {% endif %}
     </div>
 
-    <div id="all-stories">
+    <div id="all-stories" class="grid text-center">
         {% if latest_stories %}
             {% for story in all_stories %}
                 {% include './storyCard.html' with story=story %}

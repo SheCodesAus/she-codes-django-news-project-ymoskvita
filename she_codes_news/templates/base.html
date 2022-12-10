@@ -14,16 +14,19 @@
 
     <body>
         <header>
-            <div id="header-text">
-                <a id="header-link" href="{% url 'news:index' %}">
-                    <h1>She {Codes} News</h1>
-                </a>
-            </div>
-            <!-- include nav here -->
-            {% include './nav.html' %}
+            <div class="container">
+                <div id="header-text">
+                    <a id="header-link" href="{% url 'news:index' %}">
+                        <h1>She <span>{Codes}</span> News</h1>
+                    </a>
+                </div>
+                <!-- include nav here -->
+                {% include './nav.html' %}
+             </div>
         </header>
-
-        <!-- content blocks here -->
-        {% block content %}{% endblock %}
+        <div class="container">
+            <!-- content blocks here -->
+            {% block content %}{% endblock %}
+        </div>
     </body>
 </html>

@@ -1,54 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
 
 body {
-    background-color: rgb(240, 239, 239);
+  /* background-color: rgb(240, 239, 239); */
+  background-color: white;
 }
-
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 35px 0;
+}
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
+  background-color: #8246af;
+  box-shadow: 2px 5px 30px #5f5f5f;
+}
+header a {
+  color: white;
+}
+header span {
+  color: orange;
+}
+header .container,
+.latest-news-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-img {
-    filter: grayscale(100%);
-}
+/* img {
+  filter: grayscale(100%);
+} */
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
-    text-decoration: none;
-    font-size: 4rem;
-    margin: 0;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  text-decoration: none;
+  font-size: 4rem;
+  margin: 0;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: 3rem;
+  color: #8246af;
 }
 
 h3 {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 
 #header-text {
-    flex-basis: 80%;
-    display: flex;
+  flex-basis: 80%;
+  display: flex;
 }
 
 nav {
-    flex-basis: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: end;
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+}
+.username {
+  color: orange;
+}
+
+nav a {
+  margin: 0 10px;
 }
 
 a {
-    margin: 2px;
-    text-decoration: none;
-    color: #000;
+  margin: 2px;
+  text-decoration: none;
+  color: #5f5f5f;
 }
 
-a, p {
-    font-family: monospace;
+a,
+p {
+  font-family: monospace;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+input,
+textarea {
+  box-shadow: 1px 1px 3px #5f5f5f;
+}
+form p,
+form input,
+textarea {
+  margin: 10px 0;
+  border-width: 1px;
+  border-radius: 2px;
+  width: 100%;
+  font-size: inherit;
+}
+
+.new-story-btn,
+.add-story-btn {
+  color: white;
+  background-color: #8246af;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 1px 5px 5px #5f5f5f;
+}
+.add-story-btn {
+  padding: 15px 25px;
+}
+.new-story-btn:hover,
+.add-story-btn:hover {
+  color: orange;
+  border: 3px solid #8246af;
 }
