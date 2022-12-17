@@ -8,7 +8,7 @@ USER = get_user_model()
 class NewsStory(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(
-        USER, on_delete=models.CASCADE
+        USER, on_delete=models.CASCADE, related_name='stories'
     )
     pub_date = models.DateTimeField()
     content = models.TextField()
