@@ -6,11 +6,11 @@
 
 <div>
     <h2>User info</h2>
-    <p>Name: </p><p>{{ user.username }}</p>
-    <p>Email: </p><p>{{ user.email }}</p>
+    <h4>Name: </h4><p>{{ user.username }}</p>
+    <h4>Email: </h4><p>{{ user.email }}</p>
 </div>
 <div>
-    <h3>{{ user.username }} stories:</h3>
+    <h4>{{ user.username }} stories:</h4>
     <ul>
         {% for story in user.stories.all%}
         <li>

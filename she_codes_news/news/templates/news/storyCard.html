@@ -12,4 +12,12 @@
             <h4>{{ story.pub_date }}</h4>
         </div>
     </a>
+    <div class="btns">
+        <a href="{% url 'news:storyEdit' pk=story.id %}">
+            <button class="edit-btn">Edit</button>
+        </a>
+        <a href="{% url 'news:storyDelete' pk=story.id %}">
+            <button class="delete-btn">Delete</button>
+        </a>
+    </div>
 </div>
